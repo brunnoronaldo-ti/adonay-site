@@ -1,3 +1,15 @@
+/* Isso faz a rolagem parar 80px antes do elemento, 
+evitando que o título fique colado no topo da tela */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Aproveitando que você já tem o CSS aberto, 
+adicione isso para garantir suavidade até via teclado/sistema */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background-color: #0e0e0e; 
@@ -9,7 +21,7 @@ body {
     height: 400px; 
     color: white; 
     padding: 20px;
-    background-image: url('adonay-logo.png');
+    background-image: url('images/adonay-logo.png');
     background-size: cover;      
     background-position: center;
     background-repeat: no-repeat; 
