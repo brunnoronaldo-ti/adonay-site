@@ -241,23 +241,49 @@ body {
 .galeria {
   text-align: center;
   margin-bottom: 60px;
+}~
+
+.galeria h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  height: 100vh; /* Define a altura do container como a altura total da tela */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  margin: 0; /* Remove margens padrão */
 }
 
 .tl-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  display: flex;
+  width: 100%;
   max-width: 700px;
+  height: 400px;
   margin: 0 auto;
+  overflow: hidden; /* Esconde o que está fora */
+  border-radius: 16px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+    .tl-grid {
+        width: 90%;
+        height: 50px;
+        height: auto;
+    }
+    
 }
 
 .tl-grid img {
-  width: 100%;
-  height: 200px;
+  min-width: 100%; /* Cada imagem ocupa o quadro todo */
+  height: 700px;
   object-fit: cover;
-  border-radius: 16px;
+  flex-shrink: 0;
+  transition: transform 0.6s ease-in-out; /* Velocidade do deslize */
 }
-
+@media screen and (max-width: 768px) {
+    .tl-grid img {
+        height: 200px;
+    }  
+}
 
 .contato-container {
     color: white;
